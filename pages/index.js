@@ -1,79 +1,71 @@
-import Card from "../components/card"
-import { useRouter } from "next/router"
-import { episodesReducer,initialEpisodes} from "../redux/episodes"
 
-const Home = (props) =>{
+import { useState } from "react"
+import { useRouter } from "next/router"
+import { galleryReducer, initialGallery } from "../redux/gallery"
+import GallerySlider from "../components/slider"
+
+const Home = (props) => {
   console.log(props)
+  const [category, setCategory] = useState(0)
+  const [sliderOn, setSliderOn] = useState(false)
+  const [indexSelected, setIndexSelected] = useState(0)
   const router = useRouter()
-  const [episodes] = React.useReducer(episodesReducer, initialEpisodes);
-  const handleClick = (e,href,episode) => {
-    console.log(href,episode)
+  const [photosGallery] = React.useReducer(galleryReducer, initialGallery);
+  const handleClick = (e, href, episode) => {
+    console.log(href, episode)
     e.preventDefault()
-    router.push({pathname:`${href}`})
+    router.push({ pathname: `${href}` })
   }
-  return (
-    <div className="row home">
-      <div className="col-12">
-        <div className="container jumbo-section">
-          <div className="row">
-            <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-9 ml-auto pl-5 pt-4">
-              <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                  <h1 className="d-none d-sm-none d-md-none d-lg-block display-4 ">Un podcast para escuchar y compartir historias de partos positivos.</h1>
-                  <h2 className="d-md-block d-lg-none ">Un podcast para escuchar y compartir historias de partos positivos.</h2>
-                  <button className="button mt-4">
-                    Escuchar Ahora
-                  </button>
-                </div>
+  let photos = [];
+
+  if (category === 0) {
+    photos = photos.concat(photosGallery[0])
+    photos = photos.concat(photosGallery[1])
+    photos = photos.concat(photosGallery[2])
+  } else if (category === 1) {
+    photos = photosGallery[0]
+  } else if (category === 2) {
+    photos = photosGallery[1]
+  } else if (category === 3) {
+    photos = photosGallery[2]
+  }
+  return <div className="row home">
+    <div className="col-12">
+      <div className="row mt-4 ml-4">
+        <div className="col-12">
+          <a className={category === 0 ? 'my-active btn' : "btn"} onClick={() => setCategory(0)}><p>All</p></a>
+          <a className={category === 1 ? 'my-active btn' : "btn"} onClick={() => setCategory(1)}><p>Naturaleza</p></a>
+          <a className={category === 2 ? 'my-active btn' : "btn"} onClick={() => setCategory(2)}><p>Retratos</p></a>
+          <a className={category === 3 ? 'my-active btn' : "btn"} onClick={() => setCategory(3)}><p>Herencia Ancestral</p></a>
+        </div>
+      </div>
+      <div className="container-fluid">
+        <div className="row h-100 m-2">
+          {
+            photos.map((photo,index) =>
+              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-1">
+                <img onClick={() => {setIndexSelected(index);setSliderOn(true)}} className="img-fluid" src={photo} alt="" />
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-12">
-        <div className="row quote">
-          <div className="col-10 col-sm-8 col-md-9 col-lg-6 col-xl-5 mx-auto my-auto text-center">
-            <p className="mt-4">"Hay un secreto en nuestra cultura, y no es que el parto sea doloroso. Es que las mujeres son fuertes".</p>
-            <img className="flower-icon" src="/flower_icon.svg" alt="" />
-            <br />
-            <br />
-            <p>Laura Stavoe Harm</p>
-          </div>
-        </div>
-      </div>
-      <div className="col-12 episodes mb-5">
-        <div className="row ">
-          <div className="col-11 mx-auto mt-5">
-            <h1>Ultimos Episodios</h1>
-            <div className="row">
-              {episodes.map(episode =>  <div key={episode._id } className="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-2 mr-auto">
-                <Card key={episode._id} episode={episode} onClick={handleClick}></Card>
-              </div>)}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="col-12 home-about mb-5  mt-0 mt-sm-5 ">
-        <div className="container h-100">
-          <div className="row h-100">
-            <div className="col-5 my-auto d-none d-sm-block d-md-block d-lg-block">
-              <img className="becca img-fluid" src="/becca.jpg" alt="" />
-            </div>
-            <div className="col-11 col-sm-7 col-md-7 col-lg-7  my-auto">
-              <div className="container">
-                <h3 >Mamás Fuertes Historias de Partos Podcast esta organizada por Rebecca Winterfield. Una madre de dos hijos, apasionada por empoderar a las mujeres y ayudarlas a parir sin miedo.</h3>
-                <div className="row">
-                <button onClick={e=>handleClick(e,"/about",{})} className="button mx-auto mt-4">
-                  Mas informacion
-                </button>
-                </div>
-              </div>
-            </div>
-          </div>
+            )
+          }
         </div>
       </div>
     </div>
-  )
+    {
+      sliderOn === true &&
+      <div className={sliderOn === true ? "container-fluid above p-1 d-none d-sm-none d-md-inline d-lg-inline d-xl-inline" : "container-fluid p-1 d-none d-sm-none d-md-inline d-lg-inline d-xl-inline"}>
+      <button class="btn btn-exit float-right mr-4" onClick={() => setSliderOn(false)} >X</button>
+      <div className="row h-100 ml-5">
+      <div className=" col-lg-11  col-xl-11 gallery mx-auto my-auto">
+          <GallerySlider photos={photos} index={indexSelected}></GallerySlider>
+      </div>
+      </div>
+
+    </div>
+    }
+   
+  </div>
+
 }
 
 export default Home;

@@ -1,379 +1,317 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:300');
 
-body,#__next,.layout{
-  min-height: 100vh;
-  overflow-x: hidden;
+body{
+    overflow-x: hidden !important;
 }
 
-.navbar-toggler{
-  &:focus,&:active{
-    outline: transparent;
-  }
+.notFound{
+    height: 100vh;
 }
 
+.header{
 .logo{
-  width: 235px;
-  min-height: 55px;
+    width: 130px;
+    height: 110px;
 }
-a{
-  font-family: ITC Avant Garde Gothic Pro ;
-  font-size:14px;
-  color: #3A3A3B;
+.navbarlinks{
+	margin-top: 10px;
+	color:rgba(0,0,0,0.8);
+	font-size: 25px;
+	font-family: Barlow Condensed;
 }
-
-.button{
-  padding:9px 10px 6px 10px;
-  text-align: center;
-  font-family: ITC Avant Garde Gothic Pro;
-  font-size:14px;
-  background: #F9AA33 0% 0% no-repeat padding-box;
-  box-shadow: 0px 6px 6px #00000029;
-  color: rgba(58, 58, 59,0.8);
-  opacity: 1;
-  border:none;
-  &:focus{
-    outline:none
-  }
+.back{
+    background-color:rgb(255, 255, 255);
+}
+.img-fluid{
+	opacity: 0.3;
 }
 
-.header {
-  .nav-item{
-    display: inline-block;
-    vertical-align: top;
-    .nav-link {
-      min-height: 48px;
-      text-align: center;
-      text-decoration: none;
-      font-weight: normal;
-      display:table-cell;
-      vertical-align:middle;
-      }
-  } 
+.active{
+    text-decoration: underline;
+}
+}
+
+
+.home{
+    height: 100vh;
+  .container-fluid{
+      height: 100vh;
+  }
+  a,p{
+    font-family:Barlow Condensed;
+    opacity: 0.7;
+    font-size: 1.25em;
+}
+
+
+.my-active{
+    font-family: bold;
+    font-size: 1.8em;
+}
+
+.decorationOff{
+    text-decoration: none;
+}
+
+.above{
+    width: 100%;
+    height: 100%;
+        position: fixed;
+        top: 0%;
+        left:0%;
+    z-index: 1;
+    padding: 100px 100px 100px 100px;
+    background-color: rgba(211,211,211, 0.8);
+}
+
+ .gallery{
+    .slick-prev:before,
+    .slick-next:before
+    {
+      font-family: 'slick';
+      font-size: 36px;
+      line-height: 1;
+      opacity: .75;
+      color: darkslategray;
+    
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .slick-prev:before{
+        position: absolute;
+        left:-30px;
+    }
+    .slick-next:before{
+        position: absolute;
+        right:-30px;
+    }
+}
+
+.btn-left{
+    position: absolute;
+        top: 50%;
+        left:3%;
+}
+
+.btn-right{
+    position: absolute;
+        top: 50%;
+        right:3%;   
+}
+
+.btn-exit{
+    color: darkslategray;
+    font-size:24px;
+    opacity: 0.7;
+}
+
+.btn-left:hover{
+    opacity: 1;
+}
+
+.btn-right:hover{
+    opacity: 1;
+}
+
+.btn-exit:hover{
+    opacity: 1;
+}
+
+.container{
+    z-index: 0.5
+}
+
+@media (max-width: 576px) {
+    
+    .above img{
+        height: 100%;
+    }
+    
+    .btn-left{
+        position: absolute;
+            top: 50%;
+            left:3%;
+    }
+    
+    .btn-right{
+        position: absolute;
+            top: 50%;
+            right:3%;   
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .above img{
+        height: 100%;
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .above img{
+        height: 100%;
+    }
 
 }
-.footer{
-  text-align: center;
-  vertical-align: bottom;
-  font: Book 12px/16px ITC Avant Garde Gothic Pro;
-  letter-spacing: 0px;
-  font-size: 10px;
-  color: #3A3A3B;
+
+@media (max-width: 1200px) {
+    .above img{
+        height: 100%;
+    }
+
 }
-.home{  
-  .home{
-    .jumbo-section{
-      background-image: none;
+@media (min-width: 1200px) {
+    .above img{
+        height: 87%;
     }
-  }
-  .jumbotron{
-    background-color:transparent !important;
-    text-align: left;
-    font-family: ITC Avant Garde Gothic Pro;
-    letter-spacing: 0px;
-    color: #3A3A3B;
-    h2{
-      font-family: ITC Avant Garde Gothic Pro;
-      letter-spacing: 0px;
-      color: #3A3A3B;
-      font-size:24px;
-      font-weight: 500 !important;
+
+}
+}
+
+
+.about {
+    .container{
+        background-color:rgb(255, 255, 255,1);    
     }
-    .button{
-      width: 160px;
-      min-height: 38px;
-    }
-  }
-  .quote{
-    min-height: 40vh;
-    background-color:#71ABC4;
+    
     p{
-      color: #FFFFFF;
-      font-size:20px;
-      font-weight: 400 !important;
-      font-family: ITC Avant Garde Gothic Pro;
+        font-family:Raleway;   
+        font-size: 14px !important; 
     }
-    .flower-icon{
-      width: 48px;
-      min-height: 48px;
+    
+    h2{
+        font-family:Raleway;   
+        opacity: 0.8;
+        font-size: 28px !important;   
     }
-  }
-  .episodes{
-    min-height: 40vh;
-    h1,h4{
-      line-height: 64px;
-      font-size:32px;
-      font-weight: 450 !important;
-      font-family: ITC Avant Garde Gothic Pro;
-      color: #3A3A3B;
+    
+    blockquote p{
+        text-justify: inter-word;     
+        text-align: justify;
     }
-    .card{
-      font-family: ITC Avant Garde Gothic Pro,Book !important;
-      letter-spacing: 0px;
-      .date,.footer{
-        font-size:11px !important;
-      }
-      .title{
-        font-size:13px !important;
-        font-weight: 100 !important;
-        letter-spacing: 0.8px;
-      }
+    
+    @media (max-width: 576px) {
+        h2{
+            font-size: 24px;   
+        }
+        p{
+            font-size: 14px !important;
+        }
     }
-  }
-  .home-about{
-    min-height: 30vh;
-    text-align: center !important;
-    background-image: none;
-    h3{
-      font-size:18px !important;
-      font-weight: 400 !important;
-      color: #3A3A3B !important; 
+    
+    @media (max-width: 768px) {
+        h2{
+            font-size: 48px;   
+        }
+        p{
+            font-size: 18px !important;
+        }
     }
-  }
+    
+    @media (max-width: 992px) {
+        h2{
+            font-size: 48px;   
+        }
+        p{
+            font-size: 20px !important;
+        }
+    }
+    
+    @media (max-width: 1200px) {
+        h2{
+            font-size: 48px !important;   
+        }
+        p{
+            font-size: 20px !important;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        h2{
+            font-size: 48px !important;   
+        }
+        p{
+            font-size: 22px !important;
+        }
+    }
+    
 }
 
-.about,.contact,.share{
-  min-height: 80vh;
-  color:#fff;
-  h1{
-    font-size:24px;
-    font-family: ITC Avant Garde Gothic Pro,Book !important;
-    letter-spacing: 0px;
-    font-weight: 400;
-  }
-  h4,h3{
-    font-size:18px;
-    font-family: ITC Avant Garde Gothic Pro,Book !important;
-    letter-spacing: 0px;
-    font-weight: 400;
-    color: #FFFFFF; 
-   }
-}
+
 .contact{
-  background-image: none;
-}
-.share{
-  background-image: none;
-}
-.episode{
-  font-family: ITC Avant Garde Gothic Pro,Book !important;
-  letter-spacing: 0px;
-  h1,h4{
-    font-size:18px;
-    font-weight: 400;
-    font-family: ITC Avant Garde Gothic Pro,Book !important;
-    letter-spacing: 0px;
-    color: #3A3A3B;
-  }
-  .mother-name{
-    font-size:16px !important;
-  }
-  .date{
-    font-size:12px !important;
-  }
-}
-.episodes{
-  min-height: 75vh;
-  h1,h4{
-    line-height: 64px;
-    font-size:24px;
-    font-weight: 450 !important;
-    font-family: ITC Avant Garde Gothic Pro;
-    color: #3A3A3B;
-  }
-  h2{
-    line-height: 64px;
-    font-weight: 450 !important;
-    font-family: ITC Avant Garde Gothic Pro;
-    color: #3A3A3B;
-  }
-  .card{
-    font-family: ITC Avant Garde Gothic Pro,Book !important;
-    letter-spacing: 0px;
-    .date,.footer{
-      font-size:12px !important;
-    }
-    .title{
-      font-size:14px !important;
-      font-weight: 100 !important;
-      letter-spacing: 0.8px;
-    }
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { 
-  .home{
-    .jumbotron{
-      h2{
-        font-size:32px;
-      }
-    }
-    .episodes{
-      min-height: 45vh;
-    }
-    .home-about{
-      text-align: left !important;
-      min-height: 40vh;
-      .button{
-        margin-left:14px !important;
-      }
-      h3{
-        font-size:18px !important;
-      }
-    }
- }
- .about,.contact,.share{
-  height: 60vh;
-  h1{
-    font-size:36px;
-  }
-  h4,h3{
-    font-size:24px;
-   }
-}
-.episodes{
-  h1{
-    font-size:24px;
-  }
-}
-}
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
-  .logo{
-    width: 300px;
-    min-height: 75px;
+  .container{
+      max-width: 100%;
+      width: 100%;
   }
   
-  .home{
-    .quote{
-      p{
-        font-size:24px;
-      }
-    }
-    .episodes{
-      min-height: 60vh;
-      .card{
-        .date,.footer{
-          font-size:11px !important;
-        }
-        .title{
-          font-size:14px !important;
-        }
-      }
-    }
-    .home-about{
-      min-height: 40vh;
-      h3{
-        font-size:20px !important;
-      }
-    }
-  }
-  .about,.contact,.share{
-    min-height: 80vh;
-    h1{
-      font-size:42px;
-    }
-    h4,h3{
-      font-size:28px;
-     }
-  }
-
-  .episode{
-    h1,h4{
-      font-size:28px;
-    }
-    .mother-name{
-      font-size:18px !important;
-    }
-    .date{
-      font-size:14px !important;
-    }
-  }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { 
-  .logo{
-    width: 350px;
-    min-height: 85px;
-  }
-  .home{
-    .quote{
-      p{
-        font-size:24px;
-      }
-    }
-    .episodes{
-      min-height: 70vh;
-      .card{
-        .date,.footer{
-          font-size:11px !important;
-        }
-        .title{
-          font-size:14px !important;
-        }
-      }
-    }
-    .home-about{
-      min-height: 70vh;
-      h3{
-        font-size:24px !important;
-      }
-    }
-  }
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { 
-  .home{
-    .jumbo-section{
-      min-height:65vh;
-      background-image: url("/background_main_1.jpg");
-      background-position: -290px bottom;
-      background-repeat: no-repeat;
-      background-size: 110% 120%;
-    }
-    .quote{
-      p{
-        font-size:26px;
-      }
-    }
-    .episodes{
-      min-height: 30vh;
-      .card{
-        .date,.footer{
-          font-size:12px !important;
-        }
-        .title{
-          font-size:14px !important;
-        }
-      }
-    }
-    .home-about{
-      min-height: 80vh;
-      background-image: url("/background_main_2.jpg");
-      background-position: right bottom;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      font-family: ITC Avant Garde Gothic Pro,Book !important;
-      z-index: 1;
-      h3{
-        font-size:28px !important;
-        font-weight: 400 !important;
-        color: #3A3A3B !important; 
-      }
-    }
-   }
+  
   .contact{
-    background-image: url("/background_contact.jpg");
-    background-position: -250px 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+      height: 500px;
+      width: 600px;
+      font-family:Raleway;
+      opacity: 0.8;
+      font-size:18px;
+      background-color: rgba(211,211,211,0.2);
+      padding:50px;
+      -webkit-box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.3);
+      -moz-box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.3);
+      box-shadow: 5px 5px 25px 0px rgba(0,0,0,0.3);
   }
-  .share{
-    background-image: url("/background_compartir.jpg");
-    background-position: -250px 0;
-    background-repeat: no-repeat;
-    background-size: cover;
+  
+  .btn{
+      background-color: lightslategray;
+      color:white;
   }
- }
+  
+  .has-danger{
+      border:1px solid rgba(255,0,0, 0.4);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255,0,0, 0.4);
+  }
+  
+  .has-success{
+      border:1px solid rgba(0,255,0, 0.4);
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.2);
+  
+  }
+  .error{
+    font-size:14px;
+    font-weight: bold;
+    color:rgba(255,0,0, 1);
+  }
+  
+  textarea{
+      /* border:none; */
+      color:black;
+      resize: false;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      overflow:auto;
+  }
+  
+  @media (max-width: 576px) {
+  
+  }
+  
+  @media (max-width: 768px) {
+  
+  }
+  
+  @media (max-width: 992px) {
+  
+  }
+  
+  @media (max-width: 1200px) {
+  
+  }
+  
+  @media (min-width: 1200px) {
+  
+  }
+  
+}

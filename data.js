@@ -1,52 +1,47 @@
 export default [
-  {
-    _id: "0001",
-    title: "Episode 1: Matthew",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    mother_name: "Maru Parto",
-    date: "05/18/19",
-    thumbnail: "episode_place_holder.jpg",
-    spotify_url: ""
-  },  {
-    _id: "0002",
-    title: "Episode 2: Matthew",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    mother_name: "Maru Parto",
-    date: "05/18/19",
-    thumbnail: "episode_place_holder.jpg",
-    spotify_url: ""
-  },  {
-    _id: "0003",
-    title: "Episode 3: Matthew",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    mother_name: "Maru Parto",
-    date: "05/18/19",
-    thumbnail: "episode_place_holder.jpg",
-    spotify_url: ""
-  },  {
-    _id: "0004",
-    title: "Episode 4: Matthew",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    mother_name: "Maru Parto",
-    date: "05/18/19",
-    thumbnail: "episode_place_holder.jpg",
-    spotify_url: ""
-  },
-  {
-    _id: "0005",
-    title: "Episode 5: Matthew",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    mother_name: "Maru Parto",
-    date: "05/18/19",
-    thumbnail: "episode_place_holder.jpg",
-    spotify_url: ""
-  }, {
-    _id: "0006",
-    title: "Episode 6: Matthew",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ullamcorper tortor a rhoncus faucibus. Vivamus ut interdum tellus. Nam justo Leo, pharetra id magna in, ornare gravida justo. Etiam vel est velit. Ut aliquet dolor velit, nec auctor ligula tincidunt ac. Nam ut tellus arcu. Proin fringilla, erat quis sagittis eleifend, lacus est ornare eros, sed ultricies nisl metus sed Leo. Cras quis ultrices urna. Proin euismod blandit odio, mattis euismod purus commodo eget. Proin dignissim dignissim purus non tempus. Donec ut molestie leo. Suspendisse vehicula, nibh nec pellentesque tristique, odio nisl tempor eros, vehicula consectetur diam massa et ligula. Nunc efficitur vel purus sit amet placerat. Nam consequat vehicula lorem sagittis pretium. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
-    mother_name: "Maru Parto",
-    date: "05/18/19",
-    thumbnail: "episode_place_holder.jpg",
-    spotify_url: ""
-  }
+  [
+  '/imgs/web-med/natu-1.jpg',
+  '/imgs/web-med/natu-2.jpg',
+  '/imgs/web-med/natu-3.jpg',
+  '/imgs/web-med/natu-4.jpg',
+  '/imgs/web-med/natu-5.jpg',
+  '/imgs/web-med/natu-6.jpg',
+  '/imgs/web-med/natu-7.jpg',
+  '/imgs/web-med/natu-8.jpg',
+  '/imgs/web-med/natu-9.jpg',
+  '/imgs/web-med/natu-10.jpg',
+  '/imgs/web-med/natu-11.jpg',
+  '/imgs/web-med/natu-12.jpg',
+  '/imgs/web-med/natu-13.jpg',
+  '/imgs/web-med/natu-14.jpg'
+  ],
+  [
+  '/imgs/web-med/retr-1.jpg',
+  '/imgs/web-med/retr-2.jpg',
+  '/imgs/web-med/retr-3.jpg',
+  '/imgs/web-med/retr-4.jpg',
+  '/imgs/web-med/retr-5.jpg',
+  '/imgs/web-med/retr-6.jpg',
+  '/imgs/web-med/retr-7.jpg',
+  '/imgs/web-med/retr-8.jpg',
+  '/imgs/web-med/retr-9.jpg',
+  '/imgs/web-med/retr-10.jpg',
+  '/imgs/web-med/retr-11.jpg',
+  '/imgs/web-med/retr-12.jpg',
+  '/imgs/web-med/retr-13.jpg',
+  ],
+  [
+  '/imgs/web-med/here-1.jpg',
+  '/imgs/web-med/here-2.jpg',
+  '/imgs/web-med/here-3.jpg',
+  '/imgs/web-med/here-4.jpg',
+  '/imgs/web-med/here-5.jpg',
+  '/imgs/web-med/here-6.jpg',
+  '/imgs/web-med/here-7.jpg',
+  '/imgs/web-med/here-8.jpg',
+  '/imgs/web-med/here-9.jpg',
+  '/imgs/web-med/here-10.jpg',
+  '/imgs/web-med/here-11.jpg',
+  '/imgs/web-med/here-12.jpg',
+  ]
 ]

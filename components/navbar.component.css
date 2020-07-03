@@ -1,0 +1,25 @@
+
+
+.logo{
+	margin-top: 30px;
+	width:320px;
+	height: 100px;
+	font-family: Barlow Condensed;
+}
+.navbarlinks{
+	margin-top: 10px;
+	color:darkslategrey;
+	font-size: 25px;
+	font-family: Barlow Condensed;
+	opacity: 0.5;
+}
+.back{
+    background-color:rgb(255, 255, 255);
+}
+.img-fluid{
+	opacity: 0.3;
+}
+
+.active{
+    text-decoration: underline;
+}
