@@ -89,7 +89,7 @@ class Contact extends Component {
     
     if (!submitted && !submitting) {
       this.setState({submitting:true})
-      fetch('https://clarividenciafotografia.vercel.app/contact', {
+      fetch('https://clarividenciafotografia.com/contact', {
         method: 'post',
         headers: {
           'Accept': 'application/json, text/plain, */*',
