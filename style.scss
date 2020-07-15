@@ -10,12 +10,12 @@ body{
 .notFound{
     height: 100vh;
 }
-
-.header{
 .logo{
-    width: 130px;
-    height: 110px;
+    width: 175px;
+    height: 150px;
 }
+.header{
+    height: 48px;
 .navbarlinks{
 	margin-top: 10px;
 	color:rgba(0,0,0,0.8);
@@ -42,14 +42,18 @@ body{
   }
   a,p{
     font-family:Barlow Condensed;
-    opacity: 0.7;
     font-size: 1.25em;
+    color:rgba(0,0,0,0.6) !important;
 }
 
 
 .my-active{
     font-family: bold;
-    font-size: 1.8em;
+    font-size: 1.5em;
+    padding-bottom: 9px;
+    p{
+        color:rgba(0,0,0,0.8) !important;
+    }
 }
 
 .decorationOff{

@@ -5,15 +5,36 @@ var nodemailer = require("nodemailer");
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
-const sgTransport = require('nodemailer-sendgrid-transport')
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
+const dotenv = require('dotenv');
+
+const oauth2Client = new OAuth2(
+  process.env.clientId,
+  process.env.clientSecret, // Client Secret
+  process.env.redirectUrl // Redirect URL
+);
+
+oauth2Client.setCredentials({
+  refresh_token: process.env.refreshToken
+});
+
+const accessToken = oauth2Client.getAccessToken()
 
 // configuration ===========================================
-var smtpTransport = nodemailer.createTransport(sgTransport({
+let smtpTransport = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
-    api_key: process.env.SENDGRID_API
+      type: 'OAuth2',
+      user:process.env.user,
+      clientId: process.env.clientId,
+      clientSecret: process.env.clientSecret,
+      refreshToken: process.env.refreshToken,
+      accessToken:accessToken
   }
-}))
-
+});
 
 app.prepare().then(() => {
   const server = express()

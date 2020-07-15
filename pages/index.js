@@ -31,7 +31,7 @@ const Home = (props) => {
   }
   return <div className="row home">
     <div className="col-12">
-      <div className="row mt-4 ml-4">
+      <div className="row ml-1">
         <div className="col-12">
           <a className={category === 0 ? 'my-active btn' : "btn"} onClick={() => setCategory(0)}><p>All</p></a>
           <a className={category === 1 ? 'my-active btn' : "btn"} onClick={() => setCategory(1)}><p>Naturaleza</p></a>
@@ -40,7 +40,7 @@ const Home = (props) => {
         </div>
       </div>
       <div className="container-fluid">
-        <div className="row h-100 m-2">
+        <div className="row h-100 m-1">
           {
             photos.map((photo,index) =>
               <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-1">
