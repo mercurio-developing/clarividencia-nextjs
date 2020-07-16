@@ -16,9 +16,9 @@ export default function Header() {
         </div>
       </div>
       <div className="row">
-        <div className="col-12">
+        <div className="col-2 ml-auto text-right">
           <nav className="navbar navbar-expand-lg header">
-            <button className="navbar-toggler mt-4" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"><img src="../icons/icon-menu-collapse.svg" alt="" /></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
