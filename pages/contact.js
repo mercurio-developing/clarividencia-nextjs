@@ -89,7 +89,7 @@ class Contact extends Component {
     
     if (!submitted && !submitting) {
       this.setState({submitting:true})
-      fetch('/contact', {
+      fetch('/api/contact', {
         method: 'post',
         headers: {
           'Accept': 'application/json, text/plain, */*',
@@ -98,7 +98,7 @@ class Contact extends Component {
         body: JSON.stringify(data)
       }).then((res) => {
         res.status === 200 ? this.setState({ submitted: true,submitting:false}) : ''
-      })
+      }).catch((err)=>console.log(error))
     }
 
   }

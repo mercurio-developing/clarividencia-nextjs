@@ -25,6 +25,7 @@
     "react-dom": "16.13.1",
     "react-fontawesome": "^1.7.1",
     "react-slick": "^0.26.1",
-    "sass": "^1.26.8"
+    "sass": "^1.26.8",
+    "swr": "^0.2.3"
   }
 }
