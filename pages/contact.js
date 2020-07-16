@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import Router from 'next/router'
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
 
@@ -35,7 +36,7 @@ class Contact extends Component {
         break;
       case 'message':
         errors.message =
-          this.state.message.length > 20 ? '' : errors.message ;
+          this.state.message.length > 20 ? '' : errors.message;
         break;
       default:
         break;
@@ -86,9 +87,9 @@ class Contact extends Component {
       email,
       message
     }
-    
+
     if (!submitted && !submitting) {
-      this.setState({submitting:true})
+      this.setState({ submitting: true })
       fetch('/api/contact', {
         method: 'post',
         headers: {
@@ -97,60 +98,66 @@ class Contact extends Component {
         },
         body: JSON.stringify(data)
       }).then((res) => {
-        res.status === 200 ? this.setState({ submitted: true,submitting:false}) : ''
-      }).catch((err)=>console.log(error))
+        res.status === 200 ? this.setState({ submitted: true, submitting: false },()=>{
+          if(this.state.submitted){
+            setTimeout(() => {
+              Router.push("/")
+            }, 5000);
+          }
+        }) : ''
+      }).catch((err) => console.log(error))
     }
 
   }
   render() {
-    console.log(this.state)
-    const { errors,submitting } = this.state
+    const { errors, submitting, submitted } = this.state
     return <div className="container mt-5 contact">
-      <div className="row mt-5">
-        <div className="contact col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 mt-xl-5 mt-lg-5 mx-auto">
-          <form onSubmit={e => {
+      <div className="row mt-5 h-100">
+        {submitted ? <div className="col-12 mt-5 mx-auto text-center"> <p className="h4 my-auto mx-auto">Tu mensaje fue enviado exitosamente.</p></div> :
+          <div className="contact col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 mt-xl-3 mt-lg-3 mx-auto"><form onSubmit={e => {
             e.preventDefault()
             this.validateForm(errors) && this.submitForm()
           }}>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Nombre</label>
             <div className="form-group">
-              <input 
-                type="text" 
-                className="form-control" 
-                name="name" 
-                placeholder="Enter Name" 
-                onBlur={(e) => this.handleOnblur(e)} 
-                onChange={(e) => this.handleChange(e)} 
-                />
+              <input
+                type="text"
+                className="form-control"
+                name="name"
+                placeholder="Enter Name"
+                onBlur={(e) => this.handleOnblur(e)}
+                onChange={(e) => this.handleChange(e)}
+              />
               {errors.name.length > 0 &&
                 <span className='error'>{errors.name}</span>}
             </div>
             <label htmlFor="email">Email</label>
             <div className="form-group" >
-              <input type="text" 
-                noValidate 
+              <input type="text"
+                noValidate
                 className="form-control"
-                name="email" 
+                name="email"
                 placeholder="Enter email"
                 onBlur={(e) => this.handleOnblur(e)}
                 onChange={(e) => this.handleChange(e)} />
               {errors.email.length > 0 &&
                 <span className='error'>{errors.email}</span>}
             </div>
-            <label>Message</label>
+            <label>Mensaje</label>
             <div className="form-group">
-              <textarea 
-                placeholder="Enter message" 
-                className="form-control" noValidate rows="5" name="message" 
-                onBlur={(e) => this.handleOnblur(e)} 
+              <textarea
+                placeholder="Enter message"
+                className="form-control" noValidate rows="5" name="message"
+                onBlur={(e) => this.handleOnblur(e)}
                 onChange={(e) => this.handleChange(e)}>
               </textarea>
               {errors.message.length > 0 &&
                 <span className='error'>{errors.message}</span>}
             </div>
             <button type="submit" disabled={submitting} className="btn float-right">Submit</button>
-          </form>
+          </form>        
         </div>
+        }
       </div>
     </div>
   }
