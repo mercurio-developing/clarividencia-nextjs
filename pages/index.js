@@ -5,14 +5,12 @@ import { galleryReducer, initialGallery } from "../redux/gallery"
 import GallerySlider from "../components/slider"
 
 const Home = (props) => {
-  console.log(props)
   const [category, setCategory] = useState(0)
   const [sliderOn, setSliderOn] = useState(false)
   const [indexSelected, setIndexSelected] = useState(0)
   const router = useRouter()
   const [photosGallery] = React.useReducer(galleryReducer, initialGallery);
   const handleClick = (e, href, episode) => {
-    console.log(href, episode)
     e.preventDefault()
     router.push({ pathname: `${href}` })
   }

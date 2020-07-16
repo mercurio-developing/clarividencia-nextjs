@@ -24,7 +24,6 @@ class Contact extends Component {
   handleChange(e) {
     const { errors } = this.state
     const { name, value } = e.target;
-    console.log(value)
     switch (name) {
       case 'name':
         errors.name =
