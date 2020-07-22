@@ -16,7 +16,7 @@ export default function Header() {
       </div>
       <div className="row">
         <div className="col-12">
-          <nav className="navbar navbar-expand-lg header ">
+          <nav className="navbar navbar-expand-lg p-0 header ">
             <button className="navbar-toggler ml-auto " type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"><img src="../icons/icon-menu-collapse.svg" alt="" /></span>
             </button>
