@@ -6,7 +6,12 @@
 body{
     overflow-x: hidden !important;
 }
-
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
 .notFound{
     height: 100vh;
 }
@@ -15,7 +20,7 @@ body{
     height: 150px;
 }
 .header{
-    height: 48px;
+    min-height: 48px;
 .navbarlinks{
 	margin-top: 10px;
 	color:rgba(0,0,0,0.8);
@@ -298,24 +303,16 @@ body{
       overflow:auto;
   }
   
-  @media (max-width: 576px) {
-  
-  }
-  
-  @media (max-width: 768px) {
-  
-  }
-  
-  @media (max-width: 992px) {
-  
-  }
-  
-  @media (max-width: 1200px) {
-  
-  }
-  
-  @media (min-width: 1200px) {
-  
-  }
-  
+}
+
+@media (orientation:landscape) {
+    .gallery {
+        display: none;
+    }
+}
+
+@media (orientation:portrait) {
+    .gallery {
+        display: none;
+    }
 }

@@ -50,19 +50,19 @@ class Contact extends Component {
       case 'name':
         errors.name =
           value.length < 5
-            ? 'Name must be 5 characters long!'
+            ? 'Nombre tiene que tener almenos 5 caracteres!'
             : '';
         break;
       case 'email':
         errors.email =
           validEmailRegex.test(value)
             ? ''
-            : 'Email is not valid!';
+            : 'El email no es valido';
         break;
       case 'message':
         errors.message =
           value.length < 20
-            ? 'Message must be 20 characters long!'
+            ? 'El mensaje debe tener almenos 20 caracteres!'
             : '';
         break;
       default:
@@ -79,6 +79,19 @@ class Contact extends Component {
     return valid;
   }
 
+
+  formIsFilled() {
+    const { name, email, message,errors } = this.state
+    if(name.length === 0){
+      errors.name = "Por favor inserta un nombre"
+    }else if(email.length === 0){
+      errors.email = "Por favor inserta un email"
+    }else if(message.length === 0){
+      errors.message = "Por favor inserta un mensaje"
+    }
+    this.setState({errors})
+  }
+
   submitForm() {
     const { name, email, message, submitted, submitting } = this.state
     const data = {
@@ -86,8 +99,9 @@ class Contact extends Component {
       email,
       message
     }
-
+      
     if (!submitted && !submitting) {
+      console.log("caca")
       this.setState({ submitting: true })
       fetch('/api/contact', {
         method: 'post',
@@ -110,11 +124,13 @@ class Contact extends Component {
   }
   render() {
     const { errors, submitting, submitted } = this.state
+    console.log(submitted,submitting)
     return <div className="container mt-5 contact">
       <div className="row mt-5 h-100">
         {submitted ? <div className="col-12 mt-5 mx-auto text-center"> <p className="h4 my-auto mx-auto">Tu mensaje fue enviado exitosamente.</p></div> :
           <div className="contact col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 mt-xl-3 mt-lg-3 mx-auto"><form onSubmit={e => {
-            e.preventDefault()
+            e.preventDefault();
+            this.formIsFilled();
             this.validateForm(errors) && this.submitForm()
           }}>
             <label htmlFor="name">Nombre</label>
@@ -153,7 +169,7 @@ class Contact extends Component {
               {errors.message.length > 0 &&
                 <span className='error'>{errors.message}</span>}
             </div>
-            <button type="submit" disabled={submitting} className="btn float-right">Submit</button>
+            <button type="submit" disabled={submitting || !this.validateForm(this.state.errors)} className="btn float-right">Submit</button>
           </form>        
         </div>
         }
