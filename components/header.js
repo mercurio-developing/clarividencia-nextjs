@@ -24,17 +24,17 @@ export default function Header() {
               <ul className="navbar-nav  ml-auto mr-3 ">
                 <li className="nav-item"  >
                   <Link href="/">
-                    <a className="nav-link navbarlinks"   >Portfolio</a>
+                    <a className="nav-link navbarlinks"   >Portafolio</a>
                   </Link>
                 </li>
                 <li className="nav-item" >
                   <Link href="/about">
-                    <a className="nav-link navbarlinks"   >About</a>
+                    <a className="nav-link navbarlinks"   >Sobre mi</a>
                   </Link>
                 </li>
                 <li className="nav-item" >
                   <Link href="/contact">
-                    <a className="nav-link navbarlinks">Contact</a>
+                    <a className="nav-link navbarlinks">Contacto</a>
                   </Link>
                 </li>
               </ul>

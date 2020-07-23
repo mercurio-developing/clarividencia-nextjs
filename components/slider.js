@@ -13,8 +13,8 @@ export default function GallerySlider({ photos,index }) {
   return (
     <Slider {...settings}>
       {
-        photos.map(photo =>
-            <img className="img-fluid " src={photo} alt="" />
+        photos.map((photo,index) =>
+            <img key={index} className="img-fluid " src={photo} alt="" />
         )
       }
     </Slider>

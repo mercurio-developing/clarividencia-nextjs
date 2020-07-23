@@ -41,7 +41,7 @@ const Home = (props) => {
         <div className="row h-100 m-1">
           {
             photos.map((photo,index) =>
-              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-1">
+              <div key={index} className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 p-1">
                 <img onClick={() => {setIndexSelected(index);setSliderOn(true)}} className="img-fluid" src={photo} alt="" />
               </div>
             )
@@ -51,8 +51,8 @@ const Home = (props) => {
     </div>
     {
       sliderOn === true &&
-      <div className={sliderOn === true ? "container-fluid above p-1 d-none d-sm-none d-md-inline d-lg-inline d-xl-inline" : "container-fluid p-1 d-none d-sm-none d-md-inline d-lg-inline d-xl-inline"}>
-      <button class="btn btn-exit float-right mr-4" onClick={() => setSliderOn(false)} >X</button>
+      <div className={sliderOn === true ? " gallery-modal container-fluid above p-1 d-none d-sm-none d-md-inline d-lg-inline d-xl-inline" : "gallery-modal container-fluid p-1 d-none d-sm-none d-md-inline d-lg-inline d-xl-inline"}>
+      <button className="btn btn-exit float-right mr-4" onClick={() => setSliderOn(false)} >X</button>
       <div className="row h-100 ml-5">
       <div className=" col-lg-11  col-xl-11 gallery mx-auto my-auto">
           <GallerySlider photos={photos} index={indexSelected}></GallerySlider>

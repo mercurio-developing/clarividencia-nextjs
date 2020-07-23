@@ -101,7 +101,6 @@ class Contact extends Component {
     }
       
     if (!submitted && !submitting) {
-      console.log("caca")
       this.setState({ submitting: true })
       fetch('/api/contact', {
         method: 'post',
@@ -124,7 +123,6 @@ class Contact extends Component {
   }
   render() {
     const { errors, submitting, submitted } = this.state
-    console.log(submitted,submitting)
     return <div className="container mt-5 contact">
       <div className="row mt-5 h-100">
         {submitted ? <div className="col-12 mt-5 mx-auto text-center"> <p className="h4 my-auto mx-auto">Tu mensaje fue enviado exitosamente.</p></div> :
@@ -139,7 +137,7 @@ class Contact extends Component {
                 type="text"
                 className="form-control"
                 name="name"
-                placeholder="Enter Name"
+                placeholder="Insertar Nombre"
                 onBlur={(e) => this.handleOnblur(e)}
                 onChange={(e) => this.handleChange(e)}
               />
@@ -152,7 +150,7 @@ class Contact extends Component {
                 noValidate
                 className="form-control"
                 name="email"
-                placeholder="Enter email"
+                placeholder="Insertar Email"
                 onBlur={(e) => this.handleOnblur(e)}
                 onChange={(e) => this.handleChange(e)} />
               {errors.email.length > 0 &&
@@ -161,7 +159,7 @@ class Contact extends Component {
             <label>Mensaje</label>
             <div className="form-group">
               <textarea
-                placeholder="Enter message"
+                placeholder="Insertar Mensaje"
                 className="form-control" noValidate rows="5" name="message"
                 onBlur={(e) => this.handleOnblur(e)}
                 onChange={(e) => this.handleChange(e)}>
@@ -169,7 +167,7 @@ class Contact extends Component {
               {errors.message.length > 0 &&
                 <span className='error'>{errors.message}</span>}
             </div>
-            <button type="submit" disabled={submitting || !this.validateForm(this.state.errors)} className="btn float-right">Submit</button>
+            <button type="submit" disabled={submitting || !this.validateForm(this.state.errors)} className="btn float-right">Enviar</button>
           </form>        
         </div>
         }
